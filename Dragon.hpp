@@ -7,6 +7,8 @@ using namespace std;
 
 class Dragon{
 	private:
+		friend FamiliaNoble;
+		friend GuardiaReal;
 		string nombre, color;
 		int size, d_llama, ataque, defensa;
 	public:

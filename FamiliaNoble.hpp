@@ -7,6 +7,8 @@ using namespace std;
 
 class FamiliaNoble{
 	private:
+		friend Dragon;
+		friend GuardiaReal;
 		string nombre, escudo, lema;
 		int ataque, defensa;
 	public:

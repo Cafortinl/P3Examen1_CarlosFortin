@@ -10,7 +10,7 @@ using namespace std;
 class GuardiaReal{
 	private:
 		string nombre;
-		int edad, ataque, defensa;
+		int edad, ataque, defensa, tipo;
 		static const int CABALLERO = 1;
 		static const int JINETE = 2;
 		static const int ARQUERO = 3;

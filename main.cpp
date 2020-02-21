@@ -115,10 +115,101 @@ void opcionesF(int opcion){
 		       }
 
 		case 2:{
+			       int o_ej;
+			       mostrarFamilias();
+			       cin >> o_ej;
+			       switch(o_ej){
+				       case 1:{
+						      string nombre, escudo, lema;
+						      int ataque, defensa;
+						      cout << "Ingrese el nombre: ";
+						      cin >> nombre;
+						      cout << "Ingrese el ecudo: ";
+						      cin >> escudo;
+						      cout << "Ingrese el lema: ";
+						      cin >> lema;
+						      cout << "Ingrese el nivel de ataque: ";
+						      cin >> ataque;
+						      cout << "Ingrese el nivel de defensa: ";
+						      cin >> defensa;
+						      FamiliaNoble t(nombre, escudo, lema, ataque, defensa);
+						      stark.setEjercito(t);
+						      break;
+					      }
+
+				       case 2:{
+						      string nombre;
+						      int tipo, edad, ataque, defensa;
+						      cout << "Ingrese el nombre: ";
+						      cin nombre;
+						      cout << "Ingrese el tipo: \n1. Caballero\n2.Jinete\n3.Arquero";
+						      cin tipo;
+						      cout << "Ingrese la edad: ";
+						      cin >> edad;
+						      cout << "Ingrese el nivel del ataque: ";
+						      cin ataque;
+						      cout << "Ingrese el nivel de defensa: ";
+						      cin >> defensa;
+
+						      switch(tipo){
+							      case 1:{
+									     GuardiaReal t(nombre, GuardiaReal::CABALLERO, edad, ataque, defensa);
+									     lannister.setEjercito(t);
+									     break;
+								     }
+
+							      case 2:{
+									     GuardiaReal t(nombre, GuardiaReal::JINETE, edad, ataque, defensa);
+                                                                             lannister.setEjercito(t);
+									     break;
+								     }
+
+							      case 3:{
+									     GuardiaReal t(nombre, GuardiaReal::ARQUERO, edad, ataque, defensa);
+                                                                             lannister.setEjercito(t);
+									     break;
+								     }
+
+							      default:{
+									      cout << "No se pudo crear el soldado, el tipo ingresado no es valido" << endl;
+									      break;
+								      }
+						      }
+
+						      break;
+					      }
+
+				       case 3:{
+						      string nombre, color;
+						      int size, d_llama, ataque, defensa;
+						      cout << "Ingrese el nombre: ";
+						      cin >> nombre;
+						      cout << "Ingrese el color: ";
+						      cin >> color;
+						      cout << "Ingrese el tamaño: ";
+						      cin >> size;
+						      cout << "Ingrese la distancia de la llama: ";
+						      cin >> d_llama;
+						      cout << "Ingrese el nivel de ataque: ";
+						      cin >> ataque;
+						      cout << "Ingrese el nivel de defensa: ";
+						      cin >> defensa;
+						      Dragon t(nombre, color, size, d_llama, ataque, defensa);
+						      targaryen.setEjercito(t);
+						      break;
+					      }
+
+				       default:{
+						       cout << "La opcion ingresada no es valida" << endl;
+						       break;
+					       }
+			       }
 			       break;
 		       }
 
 		case 3:{
+			       int o_l;
+			       mostrarFamilias();
 			       break;
 		       }
 

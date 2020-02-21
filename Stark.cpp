@@ -42,15 +42,21 @@ string Stark::getLema(){
 }
 
 void Stark::setEjercito(FamiliaNoble x){
-	if(c_ejercito < 10)
+	if(c_ejercito < 10){
 		ejercito[c_ejercito] = x;
+		c_ejercito++;
+	}
 	else
 		cout << "El ejercito ya esta lleno!" << endl;
 }
 
-string Stark::getEjercito(){
-	for(int i = 0; i < 10; i++){
-		cout << 
+void Stark::getEjercito(){
+	for(int i = 0; i <= c_ejercito; i++){
+		cout << "----------" << endl;
+		cout << "Nombre:" << ejercito[i].getNombre() << endl;
+		cout << "Escudo:" << ejercito[i].getEscudo() << endl;
+		cout << "Lema:" << ejercito[i].getLema() << endl;
+		cout << "----------" << endl;
 	}
 }
 

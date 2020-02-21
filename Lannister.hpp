@@ -4,6 +4,7 @@
 #include <string>
 #include <array>
 #include <iostream>
+#include "GuardiaReal.hpp"
 
 using namespace std;
 
@@ -22,7 +23,7 @@ class Lannister{
 		void setLema(string x);
 		string getLema();
 		void setEjercito(GuardiaReal x);
-		string getEjercito();
+		void getEjercito();
 		void setDinero(int x);
 		int getDinero();
 		void setFuerza(int x);

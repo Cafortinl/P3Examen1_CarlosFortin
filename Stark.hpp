@@ -3,7 +3,7 @@
 #define STRAK_HPP
 #include <string>
 #include <array>
-#include "FamiliaNoble"
+#include "FamiliaNoble.hpp"
 
 using namespace std;
 
@@ -13,7 +13,7 @@ class Stark{
 		array<FamiliaNoble, 10> ejercito;
 		int c_lobos, c_integrantes, c_ejercito = 0;
 	public:
-		Strark();
+		Stark();
 		Stark(string a, string b, string c, int d, int e);
 		void setJefe(string x);
 		string getJefe();
@@ -22,7 +22,7 @@ class Stark{
 		void setLema(string x);
 		string getLema();
 		void setEjercito(FamiliaNoble x);
-		string getEjercito();
+		void getEjercito();
 		void setLobos(int x);
 		int getLobos();
 		void setIntegrantes(int x);

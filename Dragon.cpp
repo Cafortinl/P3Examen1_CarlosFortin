@@ -15,3 +15,18 @@ Dragon::Dragon(string a, string b, int c, int d, int e, int f){
 	defensa = f;
 }
 
+string Dragon::getNombre(){
+	return nombre;
+}
+
+string Dragon::getColor(){
+	return color;
+}
+
+int Dragon::getSize(){
+	return size;
+}
+
+int Dragon::getDLLama(){
+	return d_llama;
+}

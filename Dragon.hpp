@@ -11,12 +11,13 @@ class Dragon{
 	private:
 		string nombre, color;
 		int size, d_llama, ataque, defensa;
-		//void simulacion(int x);
 	public:
-		//friend void FamiliaNoble::simulacion();
-                //friend void GuardiaReal::simulacion();
 		Dragon();
 		Dragon(string a, string b, int c, int d, int e, int f);
-		//void ataque();
+		string getNombre();
+		string getColor();
+		int getDLLama();
+		int getSize();
+
 };
 #endif

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include "Dragon.hpp"
 
 using namespace std;
 
@@ -22,7 +23,7 @@ class Targaryen{
 		void setLema(string x);
 		string getLema();
 		void setEjercito(Dragon x);
-		string getEjercito();
+		void getEjercito();
 		void setBarcos(int x);
 		int getBarcos();
 };

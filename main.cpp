@@ -32,7 +32,7 @@ void opcionesF(int opcion){
 				       case 1:{
 						      string jefe, emblema, lema;
 						      int lobos, integrantes;
-						      if(stark.getJefe == "vacia"){
+						      if(stark.getJefe() == "vacia"){
 							      cout << "Ingrese el jefe de la familia: ";
 							      cin >> jefe;
 							      cout << "Ingrese el animal emblema: ";
@@ -58,7 +58,7 @@ void opcionesF(int opcion){
 					case 2:{
 						       string jefe, emblema, lema;
                                                        int dinero, fuerza, integrantes;
-                                                       if(Lannister.getJefe == "vacia"){
+                                                       if(lannister.getJefe() == "vacia"){
                                                                cout << "Ingrese el jefe de la familia: ";
                                                                cin >> jefe;
                                                                cout << "Ingrese el animal emblema: ";
@@ -70,7 +70,7 @@ void opcionesF(int opcion){
                                                                cout << "Ingrese la fuerza: ";
                                                                cin >> fuerza;
 							       cout << "Ingrese la cantidad de integrantes:";
-							       cin integrantes;
+							       cin >> integrantes;
                                                                lannister.setJefe(jefe);
                                                                lannister.setEmblema(emblema);
                                                                lannister.setLema(lema);
@@ -86,7 +86,7 @@ void opcionesF(int opcion){
 					case 3:{
 						       string reina, emblema, lema;
                                                        int barcos;
-                                                       if(targaryen.getReina == "vacia"){
+                                                       if(targaryen.getReina() == "vacia"){
                                                                cout << "Ingrese la Reina de la familia: ";
                                                                cin >> reina;
                                                                cout << "Ingrese el animal emblema: ";
@@ -98,7 +98,7 @@ void opcionesF(int opcion){
                                                                targaryen.setReina(reina);
                                                                targaryen.setEmblema(emblema);
                                                                targaryen.setLema(lema);
-                                                               targaryen.setbarcos(lobos);
+                                                               targaryen.setBarcos(barcos);
  
                                                        }
                                                        else
@@ -141,13 +141,13 @@ void opcionesF(int opcion){
 						      string nombre;
 						      int tipo, edad, ataque, defensa;
 						      cout << "Ingrese el nombre: ";
-						      cin nombre;
+						      cin >> nombre;
 						      cout << "Ingrese el tipo: \n1. Caballero\n2.Jinete\n3.Arquero";
-						      cin tipo;
+						      cin >> tipo;
 						      cout << "Ingrese la edad: ";
 						      cin >> edad;
 						      cout << "Ingrese el nivel del ataque: ";
-						      cin ataque;
+						      cin >> ataque;
 						      cout << "Ingrese el nivel de defensa: ";
 						      cin >> defensa;
 
@@ -210,6 +210,28 @@ void opcionesF(int opcion){
 		case 3:{
 			       int o_l;
 			       mostrarFamilias();
+			       cin >> o_l;
+			       switch(o_l){
+				       case 1:{
+						      stark.getEjercito();
+						      break;
+					      }
+
+				       case 2:{
+						      lannister.getEjercito();
+						      break;
+					      }
+
+				       case 3:{
+						      targaryen.getEjercito();
+						      break;
+					      }
+
+				       default:{
+						       cout << "La opcion ingresada no es valida" << endl;
+						       break;
+					       }
+			       }
 			       break;
 		       }
 
@@ -244,6 +266,8 @@ void opciones(int opcion){
 		       }
 
 		case 3:{
+			       cout << "Fin del programa" << endl;
+			       exit(0);
 			       break;
 		       }
 
@@ -272,6 +296,6 @@ int main(){
 		cin >> opcion;
 		opciones(opcion);
 		cout << endl;
-	}while(opcion != 3)
+	}while(opcion != 3);
 	return 0;
 }

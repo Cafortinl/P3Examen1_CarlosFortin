@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include "Dragon.hpp"
 
 using namespace std;
 
@@ -40,13 +41,23 @@ string Targaryen::getLema(){
 }
 
 void Targaryen::setEjercito(Dragon x){
-	if(c_ejercito < 10)
+	if(c_ejercito < 10){
 		ejercito[c_ejercito] = x;
+		c_ejercito++;
+	}
 	else
 		cout << "El ejercito esta lleno!" << endl;
 }
 
-string Targaryen::getEjercito(){
+void Targaryen::getEjercito(){
+	for(int i = 0; i <= c_ejercito; i++){
+                cout << "----------" << endl;
+                cout << "Nombre:" << ejercito[i].getNombre() << endl;
+                cout << "Color:" << ejercito[i].getColor() << endl;
+                cout << "Size:" << ejercito[i].getSize() << endl;
+		cout << "Distancia de llama:" << ejercito[i].getDLLama() << endl;
+                cout << "----------" << endl;
+        }
 }
 
 void Targaryen::setBarcos(int x){

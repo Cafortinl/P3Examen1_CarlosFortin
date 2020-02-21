@@ -1,4 +1,5 @@
 #include "Lannister.hpp"
+#include "GuardiaReal.hpp"
 #include <iostream>
 #include <string>
 #include <array>
@@ -42,13 +43,22 @@ string Lannister::getLema(){
 }
 
 void Lannister::setEjercito(GuardiaReal x){
-	if(c_ejercito < 10)
+	if(c_ejercito < 10){
 		ejercito[c_ejercito] = x;
+		c_ejercito++;
+	}
 	else
 		cout << "El ejercito ya esta lleno!" << endl;
 }
 
-string Lannister::getEjercito(){
+void Lannister::getEjercito(){
+	for(int i = 0; i <= c_ejercito; i++){
+                cout << "----------" << endl;
+                cout << "Nombre:" << ejercito[i].getNombre() << endl;
+                cout << "Tipo:" << ejercito[i].getTipo() << endl;
+                cout << "Edad:" << ejercito[i].getEdad() << endl;
+                cout << "----------" << endl;
+        }
 }
 
 void Lannister::setDinero(int x){

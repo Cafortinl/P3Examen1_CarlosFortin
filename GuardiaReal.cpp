@@ -9,5 +9,5 @@ GuardiaReal::GuardiaReal(){
 GuardiaReal::GuardiaReal(string a, int b, int c, int d, int e){
 }
 
-void GuardiaReal::ataque(){
-}
+//void GuardiaReal::ataque(){
+//}

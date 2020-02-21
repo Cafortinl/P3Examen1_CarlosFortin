@@ -42,7 +42,7 @@ void opcionesF(int opcion){
 							      cout << "Ingrese la cantidad de lobos huargos: ";
 							      cin >> lobos;
 							      cout << "Ingrese la cantidad de integrantes: ";
-							      cin >> integrantesl;
+							      cin >> integrantes;
 							      stark.setJefe(jefe);
 							      stark.setEmblema(emblema);
 							      stark.setLema(lema);
@@ -57,31 +57,53 @@ void opcionesF(int opcion){
 
 					case 2:{
 						       string jefe, emblema, lema;
-                                                       int lobos, integrantes;
-                                                       if(stark.getJefe == "vacia"){
+                                                       int dinero, fuerza, integrantes;
+                                                       if(Lannister.getJefe == "vacia"){
                                                                cout << "Ingrese el jefe de la familia: ";
                                                                cin >> jefe;
                                                                cout << "Ingrese el animal emblema: ";
                                                                cin >> emblema;
                                                                cout << "Ingrese el lema de la familia: ";
                                                                cin >> lema;
-                                                               cout << "Ingrese la cantidad de lobos huargos: ";
-                                                               cin >> lobos;
-                                                               cout << "Ingrese la cantidad de integrantes: ";
-                                                               cin >> integrantesl;
-                                                               stark.setJefe(jefe);
-                                                               stark.setEmblema(emblema);
-                                                               stark.setLema(lema);
-                                                               stark.setLobos(lobos);
-                                                               stark.setIntegrantes(integrantes); 
+                                                               cout << "Ingrese la cantidad de dinero: ";
+                                                               cin >> dinero;
+                                                               cout << "Ingrese la fuerza: ";
+                                                               cin >> fuerza;
+							       cout << "Ingrese la cantidad de integrantes:";
+							       cin integrantes;
+                                                               lannister.setJefe(jefe);
+                                                               lannister.setEmblema(emblema);
+                                                               lannister.setLema(lema);
+                                                               lannister.setDinero(dinero);
+                                                               lannister.setIntegrantes(integrantes);
+							       lannister.setFuerza(fuerza); 
                                                        }
                                                        else
-                                                               cout << "La familia Stark ya esta creada!" << endl;
+                                                               cout << "La familia Lannister ya esta creada!" << endl;
 						       break;
 					       }
 
 					case 3:{
-						       break;
+						       string reina, emblema, lema;
+                                                       int barcos;
+                                                       if(targaryen.getReina == "vacia"){
+                                                               cout << "Ingrese la Reina de la familia: ";
+                                                               cin >> reina;
+                                                               cout << "Ingrese el animal emblema: ";
+                                                               cin >> emblema;
+                                                               cout << "Ingrese el lema de la familia: ";
+                                                               cin >> lema;
+                                                               cout << "Ingrese la cantidad de barcos: ";
+                                                               cin >> barcos;
+                                                               targaryen.setReina(reina);
+                                                               targaryen.setEmblema(emblema);
+                                                               targaryen.setLema(lema);
+                                                               targaryen.setbarcos(lobos);
+ 
+                                                       }
+                                                       else
+                                                               cout << "La familia Targaryen ya esta creada!" << endl;
+                                                       break;
 					       }
 
 					default:{
@@ -152,7 +174,7 @@ void menuP(){
 int main(){
 	stark.setJefe("vacia");
 	lannister.setJefe("vacia");
-	targaryen.setJefe("vacia");
+	targaryen.setReina("vacia");
 	int opcion = 0;
 	do{
 		menuP();

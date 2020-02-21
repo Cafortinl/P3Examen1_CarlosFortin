@@ -7,7 +7,7 @@ using namespace std;
 FamiliaNoble::FamiliaNoble(){
 }
 
-FamiliaNomble::FamiliaNoble(string a, string b, string c, int d, int e){
+FamiliaNoble::FamiliaNoble(string a, string b, string c, int d, int e){
 	nombre = a;
 	escudo = b;
 	lema = c;
@@ -15,26 +15,26 @@ FamiliaNomble::FamiliaNoble(string a, string b, string c, int d, int e){
 	defensa = e;
 }
 
-void FamiliaNomble::setNombre(string x){
+void FamiliaNoble::setNombre(string x){
 	nombre = x;
 }
 
-string FamiliaNomble::getNombre(){
+string FamiliaNoble::getNombre(){
 	return nombre;
 }
 
-void FamiliaNomble::setEscudo(string x){
+void FamiliaNoble::setEscudo(string x){
 	escudo = x;
 }
 
-string FamiliaNomble::getEscudo(){
+string FamiliaNoble::getEscudo(){
 	return escudo;
 }
 
-void FamiliaNomble::setLema(string x){
+void FamiliaNoble::setLema(string x){
 	lema = x;
 }
 
-string FamiliaNomble::getLema(){
+string FamiliaNoble::getLema(){
 	return lema;
 }

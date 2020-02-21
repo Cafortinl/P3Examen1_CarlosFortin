@@ -18,21 +18,27 @@ Lannister::Lannister(string a, string b, string c, int d, int e, int f){
 }
 
 void Lannister::setJefe(string x){
+	jefe = x;
 }
 
 string Lannister::getJefe(){
+	return jefe;
 }
 
 void Lannister::setEmblema(string x){
+	emblema = x;
 }
 
 string Lannister::getEmblema(){
+	return emblema;
 }
 
 void Lannister::setLema(string x){
+	lema = x;
 }
 
 string Lannister::getLema(){
+	return lema;
 }
 
 void Lannister::setEjercito(GuardiaReal x){
@@ -46,20 +52,26 @@ string Lannister::getEjercito(){
 }
 
 void Lannister::setDinero(int x){
+	c_dinero = x;
 }
 
 int Lannister::getDinero(){
+	return c_dinero;
 }
 
 void Lannister::setFuerza(int x){
+	fuerza_m = x;
 }
 
 int Lannister::getFuerza(){
+	return fuerza_m;
 }
 
 void Lannister::setIntegrantes(int x){
+	c_integrantes = x;
 }
 
 int Lannister::getIntegrantes(){
+	return c_integrantes;
 }
 

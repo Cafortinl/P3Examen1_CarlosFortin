@@ -15,6 +15,3 @@ Dragon::Dragon(string a, string b, int c, int d, int e, int f){
 	defensa = f;
 }
 
-Dragon::void ataque(){
-}
-

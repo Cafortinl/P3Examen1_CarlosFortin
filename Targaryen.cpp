@@ -16,21 +16,27 @@ Targaryen::Targaryen(string a, string b, string c, int d){
 }
 
 void Targaryen::setReina(string x){
+	reina = x;
 }
 
 string Targaryen::getReina(){
+	return reina;
 }
 
 void Targaryen::setEmblema(string x){
+	emblema = x;
 }
 
 string Targaryen::getEmblema(){
+	return emblema;
 }
 
 void Targaryen::setLema(string x){
+	lema = x;
 }
 
 string Targaryen::getLema(){
+	return lema;
 }
 
 void Targaryen::setEjercito(Dragon x){
@@ -44,7 +50,9 @@ string Targaryen::getEjercito(){
 }
 
 void Targaryen::setBarcos(int x){
+	c_barcos = x;
 }
 
 int Targaryen::getBarcos(){
+	return c_barcos;
 }

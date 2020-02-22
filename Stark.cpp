@@ -51,7 +51,7 @@ void Stark::setEjercito(FamiliaNoble x){
 }
 
 void Stark::getEjercito(){
-	for(int i = 0; i <= c_ejercito; i++){
+	for(int i = 0; i < c_ejercito; i++){
 		cout << "----------" << endl;
 		cout << "Nombre:" << ejercito[i].getNombre() << endl;
 		cout << "Escudo:" << ejercito[i].getEscudo() << endl;

@@ -12,6 +12,7 @@ class Dragon{
 		string nombre, color;
 		int size, d_llama, ataque, defensa;
 	public:
+		friend void simulacion();
 		Dragon();
 		Dragon(string a, string b, int c, int d, int e, int f);
 		string getNombre();

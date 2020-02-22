@@ -10,9 +10,9 @@ using namespace std;
 class Stark{
 	private:
 		string jefe, emblema, lema;
-		array<FamiliaNoble, 10> ejercito;
 		int c_lobos, c_integrantes, c_ejercito = 0;
 	public:
+		array<FamiliaNoble, 10> ejercito;
 		Stark();
 		Stark(string a, string b, string c, int d, int e);
 		void setJefe(string x);

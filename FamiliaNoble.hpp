@@ -12,6 +12,7 @@ class FamiliaNoble{
 		string nombre, escudo, lema;
 		int ataque, defensa;
 	public:
+		friend void simulacion();
 		FamiliaNoble();
 		FamiliaNoble(string a, string b, string c, int d, int e);
 		void setNombre(string x);

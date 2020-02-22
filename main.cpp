@@ -12,6 +12,27 @@ using namespace std;
 Stark stark;
 Lannister lannister;
 Targaryen targaryen;
+int f1, f2, c_e1 = 0, c_e2 = 0, c_e3 = 0;
+
+void simulacion(){
+	int af1, df1, af2, df2;
+	if(f1 == 1 && f2 == 2){
+		for(int i=0;i<c_e1;i++){
+			af1 += stark.ejercito[i].ataque;
+		}
+		cout << af1 << endl;
+	}
+	else if(f1 == 1 && f2 == 3){
+	}
+	else if(f1 == 2 && f2 == 1){
+	}
+	else if(f1 == 2 && f2 == 3){
+	}
+	else if(f1 == 3 && f2 == 1){
+	}
+	else if(f1 == 3 && f2 == 2){
+	}
+}
 
 void mostrarFamilias(){
 	cout << "--------Familias--------" << endl;
@@ -134,6 +155,7 @@ void opcionesF(int opcion){
 						      cin >> defensa;
 						      FamiliaNoble t(nombre, escudo, lema, ataque, defensa);
 						      stark.setEjercito(t);
+						      c_e1++;
 						      break;
 					      }
 
@@ -155,18 +177,21 @@ void opcionesF(int opcion){
 							      case 1:{
 									     GuardiaReal t(nombre, GuardiaReal::CABALLERO, edad, ataque, defensa);
 									     lannister.setEjercito(t);
+									     c_e2++;
 									     break;
 								     }
 
 							      case 2:{
 									     GuardiaReal t(nombre, GuardiaReal::JINETE, edad, ataque, defensa);
                                                                              lannister.setEjercito(t);
+									     c_e2++;
 									     break;
 								     }
 
 							      case 3:{
 									     GuardiaReal t(nombre, GuardiaReal::ARQUERO, edad, ataque, defensa);
                                                                              lannister.setEjercito(t);
+									     c_e2++;
 									     break;
 								     }
 
@@ -196,6 +221,7 @@ void opcionesF(int opcion){
 						      cin >> defensa;
 						      Dragon t(nombre, color, size, d_llama, ataque, defensa);
 						      targaryen.setEjercito(t);
+						      c_e3++;
 						      break;
 					      }
 
@@ -262,6 +288,16 @@ void opciones(int opcion){
 		       }
 
 		case 2:{
+			       mostrarFamilias();
+			       cout << "Seleccione la primera familia: ";
+			       cin >> f1;
+			       cout << "Seleccione la segunda familia: ";
+			       cin >> f2;
+			       while(f1 == f2){
+				       cout << "No puede seleccionar la misma familia. Ingrese otra: ";
+				       cin >> f2;
+			       }
+			       simulacion();
 			       break;
 		       }
 

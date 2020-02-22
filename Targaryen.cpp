@@ -50,7 +50,7 @@ void Targaryen::setEjercito(Dragon x){
 }
 
 void Targaryen::getEjercito(){
-	for(int i = 0; i <= c_ejercito; i++){
+	for(int i = 0; i < c_ejercito; i++){
                 cout << "----------" << endl;
                 cout << "Nombre:" << ejercito[i].getNombre() << endl;
                 cout << "Color:" << ejercito[i].getColor() << endl;

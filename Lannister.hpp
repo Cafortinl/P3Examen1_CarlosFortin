@@ -11,9 +11,9 @@ using namespace std;
 class Lannister{
 	private:
 		string jefe, emblema, lema;
-		array<GuardiaReal, 10> ejercito;
 		int c_dinero, fuerza_m, c_integrantes, c_ejercito = 0;
 	public:
+		array<GuardiaReal, 10> ejercito;
 		Lannister();
 		Lannister(string a, string b, string c, int d, int e, int f);
 		void setJefe(string x);

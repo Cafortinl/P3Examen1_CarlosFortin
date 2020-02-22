@@ -52,7 +52,7 @@ void Lannister::setEjercito(GuardiaReal x){
 }
 
 void Lannister::getEjercito(){
-	for(int i = 0; i <= c_ejercito; i++){
+	for(int i = 0; i < c_ejercito; i++){
                 cout << "----------" << endl;
                 cout << "Nombre:" << ejercito[i].getNombre() << endl;
                 cout << "Tipo:" << ejercito[i].getTipo() << endl;

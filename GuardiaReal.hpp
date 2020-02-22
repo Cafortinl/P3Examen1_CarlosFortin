@@ -12,6 +12,7 @@ class GuardiaReal{
 		string nombre;
 		int edad, ataque, defensa, tipo;
 	public:
+		friend void simulacion();
 		static const int CABALLERO = 1;
                 static const int JINETE = 2;
                 static const int ARQUERO = 3;
